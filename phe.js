@@ -1,28 +1,22 @@
 'use strict'
 
+// Import updated RankCategory and handRank
 const {
-     handRank
-   , rankDescription
-   , STRAIGHT_FLUSH
-   , FOUR_OF_A_KIND
-   , FULL_HOUSE
-   , FLUSH
-   , STRAIGHT
-   , THREE_OF_A_KIND
-   , TWO_PAIR
-   , ONE_PAIR
-   , HIGH_CARD
+    rankCategoryDescription,
+    handRank
 } = require('./lib/hand-rank')
 
+const rankDescription = require('./rank-descriptions-table'); // Importing rank descriptions
+
 const {
-    cardCode
-  , cardCodes
-  , boardCodes
-  , rankCodes
-  , suitCodes
-  , stringifyCardCode
-  , stringifyRank
-  , stringifySuit
+    cardCode,
+    cardCodes,
+    boardCodes,
+    rankCodes,
+    suitCodes,
+    stringifyCardCode,
+    stringifyRank,
+    stringifySuit
 } = require('./lib/hand-code')
 
 const evaluate5cards = require('./lib/evaluator5')
@@ -134,6 +128,8 @@ function rankBoard(cards) {
   return handRank(evaluateBoard(cards))
 }
 
+
+
 /**
  * Converts a set of cards to card codes.
  *
@@ -163,60 +159,30 @@ function setStringifyCardCodes(set) {
   return stringSet
 }
 
-/**
-  * Enumeration of possible hand ranks, each rank is a number from 0-8.
-  *
-  * ```
-  * STRAIGHT_FLUSH
-  * FOUR_OF_A_KIND
-  * FULL_HOUSE
-  * FLUSH
-  * STRAIGHT
-  * THREE_OF_A_KIND
-  * TWO_PAIR
-  * ONE_PAIR
-  * HIGH_CARD
-  * ```
-  *
-  * @name ranks
-  * @function
-  */
-const ranks = {
-    STRAIGHT_FLUSH
-  , FOUR_OF_A_KIND
-  , FULL_HOUSE
-  , FLUSH
-  , STRAIGHT
-  , THREE_OF_A_KIND
-  , TWO_PAIR
-  , ONE_PAIR
-  , HIGH_CARD
-}
-
 module.exports = {
-    evaluateCards
-  , evaluateCardsFast
-  , evaluateCardCodes
-  , evaluateBoard
-  , rankCards
-  , rankCardsFast
-  , rankCardCodes
-  , rankBoard
+    evaluateCards,
+    evaluateCardsFast,
+    evaluateCardCodes,
+    evaluateBoard,
+    rankCards,
+    rankCardsFast,
+    rankCardCodes,
+    rankBoard,
 
-  // hand rank
-  , handRank
-  , rankDescription
-  , ranks
+    // hand rank
+    handRank,
+    rankDescription,
+    rankCategoryDescription,
 
-  // hand code
-  , cardCode
-  , cardCodes
-  , setCardCodes
-  , setStringifyCardCodes
-  , boardCodes
-  , rankCodes
-  , suitCodes
-  , stringifyCardCode
-  , stringifyRank
-  , stringifySuit
+    // hand code
+    cardCode,
+    cardCodes,
+    setCardCodes,
+    setStringifyCardCodes,
+    boardCodes,
+    rankCodes,
+    suitCodes,
+    stringifyCardCode,
+    stringifyRank,
+    stringifySuit
 }
