@@ -1,4 +1,6 @@
-# phe [![build status](https://secure.travis-ci.org/thlorenz/phe.png)](http://travis-ci.org/thlorenz/phe)
+# phe
+
+I forked this to add more detailed hand descriptions. I haven't updated the documentation. Sorry!
 
 Poker hand evaluator, a port of [PokerHandEvaluator](https://github.com/HenryRLee/PokerHandEvaluator).
 
