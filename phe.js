@@ -6,7 +6,7 @@ const {
     handRank
 } = require('./lib/hand-rank')
 
-const rankDescription = require('./rank-descriptions-table'); // Importing rank descriptions
+const rankDescription = require('./lib/rank-descriptions-table'); // Importing rank descriptions
 
 const {
     cardCode,
