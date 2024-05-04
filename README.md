@@ -1,6 +1,6 @@
-# phe
-
 I forked this to add more detailed hand descriptions. I haven't updated the documentation. Sorry!
+
+# phe
 
 Poker hand evaluator, a port of [PokerHandEvaluator](https://github.com/HenryRLee/PokerHandEvaluator).
 
